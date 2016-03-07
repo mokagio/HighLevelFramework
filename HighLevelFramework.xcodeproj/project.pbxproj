@@ -11,6 +11,7 @@
 		5E78F83C1C8E36CA0053FCD9 /* HighLevelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78F8311C8E36CA0053FCD9 /* HighLevelFramework.framework */; };
 		5E78F84C1C8E372B0053FCD9 /* HighLevelFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F84B1C8E372B0053FCD9 /* HighLevelFeature.swift */; };
 		5E78F84E1C8E38310053FCD9 /* HighLevelFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F84D1C8E38310053FCD9 /* HighLevelFeatureTests.swift */; };
+		5E78F8501C8E3B410053FCD9 /* LowLevelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		5E78F8421C8E36CA0053FCD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E78F84B1C8E372B0053FCD9 /* HighLevelFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighLevelFeature.swift; sourceTree = "<group>"; };
 		5E78F84D1C8E38310053FCD9 /* HighLevelFeatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighLevelFeatureTests.swift; sourceTree = "<group>"; };
+		5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LowLevelFramework.framework; path = Carthage/Build/iOS/LowLevelFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78F8501C8E3B410053FCD9 /* LowLevelFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +58,7 @@
 		5E78F8271C8E36CA0053FCD9 = {
 			isa = PBXGroup;
 			children = (
+				5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */,
 				5E78F8331C8E36CA0053FCD9 /* HighLevelFramework */,
 				5E78F83F1C8E36CA0053FCD9 /* HighLevelFrameworkTests */,
 				5E78F8321C8E36CA0053FCD9 /* Products */,
@@ -111,6 +115,7 @@
 				5E78F82D1C8E36CA0053FCD9 /* Frameworks */,
 				5E78F82E1C8E36CA0053FCD9 /* Headers */,
 				5E78F82F1C8E36CA0053FCD9 /* Resources */,
+				5E78F8541C8E3CD30053FCD9 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -191,6 +196,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E78F8541C8E3CD30053FCD9 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/LowLevelFramework.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E78F82C1C8E36CA0053FCD9 /* Sources */ = {
@@ -317,6 +340,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HighLevelFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -335,6 +362,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HighLevelFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -347,6 +378,7 @@
 		5E78F8491C8E36CA0053FCD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = HighLevelFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Intelematics.HighLevelFrameworkTests;
@@ -357,6 +389,7 @@
 		5E78F84A1C8E36CA0053FCD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = HighLevelFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Intelematics.HighLevelFrameworkTests;

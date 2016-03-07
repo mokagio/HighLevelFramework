@@ -12,6 +12,6 @@ import XCTest
 class HighLevelFeatureTest: XCTestCase {
     
     func testHighLevelFeature() {
-        XCTAssertEqual(highLevelFeature(), "high-level-result")
+        XCTAssertEqual(highLevelFeature(), "high-level__low-level-result__level-high")
     }
 }
