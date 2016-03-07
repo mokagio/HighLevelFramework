@@ -12,6 +12,7 @@
 		5E78F84C1C8E372B0053FCD9 /* HighLevelFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F84B1C8E372B0053FCD9 /* HighLevelFeature.swift */; };
 		5E78F84E1C8E38310053FCD9 /* HighLevelFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F84D1C8E38310053FCD9 /* HighLevelFeatureTests.swift */; };
 		5E78F8501C8E3B410053FCD9 /* LowLevelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */; };
+		5E78F88B1C8E4C800053FCD9 /* LowLevelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78F88B1C8E4C800053FCD9 /* LowLevelFramework.framework in Frameworks */,
 				5E78F83C1C8E36CA0053FCD9 /* HighLevelFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +418,7 @@
 				5E78F8471C8E36CA0053FCD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5E78F8481C8E36CA0053FCD9 /* Build configuration list for PBXNativeTarget "HighLevelFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +427,7 @@
 				5E78F84A1C8E36CA0053FCD9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
