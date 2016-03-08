@@ -129,7 +129,6 @@
 				5E78F82D1C8E36CA0053FCD9 /* Frameworks */,
 				5E78F82E1C8E36CA0053FCD9 /* Headers */,
 				5E78F82F1C8E36CA0053FCD9 /* Resources */,
-				5E78F8541C8E3CD30053FCD9 /* Carthage */,
 				5E78F88E1C8E54D40053FCD9 /* CopyFiles */,
 			);
 			buildRules = (
@@ -211,24 +210,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5E78F8541C8E3CD30053FCD9 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LowLevelFramework.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5E78F82C1C8E36CA0053FCD9 /* Sources */ = {
