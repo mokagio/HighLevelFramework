@@ -12,7 +12,7 @@
 		5E78F84C1C8E372B0053FCD9 /* HighLevelFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F84B1C8E372B0053FCD9 /* HighLevelFeature.swift */; };
 		5E78F84E1C8E38310053FCD9 /* HighLevelFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78F84D1C8E38310053FCD9 /* HighLevelFeatureTests.swift */; };
 		5E78F8501C8E3B410053FCD9 /* LowLevelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */; };
-		5E78F88B1C8E4C800053FCD9 /* LowLevelFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */; };
+		5E78F88F1C8E54E10053FCD9 /* LowLevelFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E78F84F1C8E3B410053FCD9 /* LowLevelFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +24,19 @@
 			remoteInfo = HighLevelFramework;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5E78F88E1C8E54D40053FCD9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5E78F88F1C8E54E10053FCD9 /* LowLevelFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5E78F8311C8E36CA0053FCD9 /* HighLevelFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HighLevelFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E78F88B1C8E4C800053FCD9 /* LowLevelFramework.framework in Frameworks */,
 				5E78F83C1C8E36CA0053FCD9 /* HighLevelFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +130,7 @@
 				5E78F82E1C8E36CA0053FCD9 /* Headers */,
 				5E78F82F1C8E36CA0053FCD9 /* Resources */,
 				5E78F8541C8E3CD30053FCD9 /* Carthage */,
+				5E78F88E1C8E54D40053FCD9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -380,7 +393,7 @@
 		5E78F8491C8E36CA0053FCD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
 				INFOPLIST_FILE = HighLevelFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Intelematics.HighLevelFrameworkTests;
@@ -391,7 +404,7 @@
 		5E78F84A1C8E36CA0053FCD9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
 				INFOPLIST_FILE = HighLevelFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Intelematics.HighLevelFrameworkTests;
