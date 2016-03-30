@@ -1,0 +1,6 @@
+---
+:bucket_name: intelematics-ios-carthage-cache
+:aws_s3_client_options:
+  :region: ap-southeast-2
+  :access_key_id: AKIAIOP23HNSN6IHGTMA
+  :secret_access_key: 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
