@@ -3,6 +3,9 @@ steps:
     command: ./Scripts/ci_bootstrap.sh && ./Scripts/ci_tests.sh
     agents:
       xcode: true
-  - block
-  - name: "Update Dependencies :arrow_up:"
-    command: ./Scripts/ci_build_with_update_demo.sh
+  - wait
+  - name: "Downstream Dependencies Update :arrow_up::ocean:"
+    command: bundle exec river update_downstream
+    branches: master
+    agents:
+      xcode: true
